@@ -145,3 +145,17 @@ function animate() {
 }
 
 animate();
+
+
+// animating the videos
+
+//const animationSection = document.querySelector('.animation');
+
+//const green = document.querySelector('.green');
+
+//animation.onscroll = () => {
+//if (animation.scrollTop > 0){
+
+//  green.play();
+//}
+//}

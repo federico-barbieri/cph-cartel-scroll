@@ -126,7 +126,7 @@ canvas {
     line-height: 1;
   }
 
-  .introducing {
+  #introducing {
     grid-column: 3 / 11;
     text-align: center;
   }
@@ -137,6 +137,25 @@ canvas {
 
   .take-care{
     font-size: 2rem;
+  }
+
+  .animation{
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: 80vh;
+    margin: 0rem auto 2rem auto;
+    grid-column: 1 / -1;
+  }
+
+  video{
+    width: 20rem;
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(2px 4px 8px black);
   }
 
   .read-more{
