@@ -21,9 +21,8 @@ a:hover{
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
 
-  font-family: brandon-grotesque, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Brice", sans-serif;
+  font-style: "Semibold";
 }
 
 
@@ -41,9 +40,8 @@ main {
 }
 
 h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  font-family: "Brice", sans-serif;
+  font-style: "Semibold";
 }
 
 canvas {
@@ -116,6 +114,7 @@ canvas {
     padding: 0;
     grid-column: 2 / span 9;
     margin-bottom: var(--spacing);
+    font-family: "Satoshi", sans-serif;
   }
 
   blockquote p {
@@ -123,7 +122,7 @@ canvas {
     background-color: white;
     font-size: 4rem;
     display: inline;
-    line-height: 1;
+    line-height: 1.5;
   }
 
   #introducing {
