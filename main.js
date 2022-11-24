@@ -19,14 +19,6 @@ camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
-// Torus
-
-//const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-//const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-//const torus = new THREE.Mesh(geometry, material);
-
-//scene.add(torus);
-
 // Lights
 
 const pointLight = new THREE.PointLight(0xffffff);
@@ -35,13 +27,6 @@ pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// Helpers
-
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
-
-// const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
@@ -61,7 +46,8 @@ Array(200).fill().forEach(addStar);
 
 // OCEAN Background
 
-const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
+//const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
+const oceanTexture = new THREE.TextureLoader().load('new-ocean.jpg');
 scene.background = oceanTexture;
 
 // PLASTIC SQUARE
@@ -101,6 +87,7 @@ turtle.position.z = -400;
 turtle.position.x = -10;
 
 
+
 // Scroll Animation
 
 function moveCamera() {
@@ -128,7 +115,9 @@ function moveCamera() {
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
-  camera.rotation.y = t * -0.0002;
+  camera.rotation.y = t * -0.0004;
+
+  camera.rotation.z = t * -0.0002;
 }
 
 document.body.onscroll = moveCamera;
@@ -160,9 +149,9 @@ animate();
 //}
 //}
 
+
+
 // fetching videos from wordpress
-
-
 
 const endpoint = "https://federicobarbieri.dk/cph-cartel/wp-json/wp/v2/media";
 
@@ -175,7 +164,6 @@ async function getData() {
 function showPosts(posts){
     
     posts.forEach((bikini) => {
-        
 
         let template = document.querySelector('template').content;
         let clone = template.cloneNode(true);
@@ -189,3 +177,4 @@ function showPosts(posts){
 }
 
 getData();
+
