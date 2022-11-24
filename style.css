@@ -391,6 +391,10 @@ canvas {
         text-align: center;
       }
 
+      h3{
+        font-size: 1.5rem;
+      }
+
       h4{
         font-size: 1rem;
       }
@@ -614,6 +618,10 @@ canvas {
         font-size: 2rem;
         margin: 0 auto;
         text-align: center;
+      }
+
+      h3{
+        font-size: 1.5rem;
       }
 
       h4{
