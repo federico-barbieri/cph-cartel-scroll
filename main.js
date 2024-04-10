@@ -47,12 +47,12 @@ Array(200).fill().forEach(addStar);
 // OCEAN Background
 
 //const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
-const oceanTexture = new THREE.TextureLoader().load('new-ocean.jpg');
+const oceanTexture = new THREE.TextureLoader().load('new-ocean.webp');
 scene.background = oceanTexture;
 
 // PLASTIC SQUARE
 
-const plasticTexture = new THREE.TextureLoader().load('oceanplastic.jpg');
+const plasticTexture = new THREE.TextureLoader().load('oceanplastic.png');
 
 const plastic = new THREE.Mesh(new THREE.BoxGeometry(20, 20, 20), new THREE.MeshBasicMaterial({ map: plasticTexture }));
 
@@ -64,7 +64,7 @@ plastic.position.x = 10;
 
 // BEACH SQUARE
 
-const beachTexture = new THREE.TextureLoader().load('beach.jpg');
+const beachTexture = new THREE.TextureLoader().load('beach.webp');
 
 const beach = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshBasicMaterial({ map: beachTexture }));
 
@@ -76,7 +76,7 @@ beach.position.x = 5;
 
 // TURTLE SQUARE
 
-const turtleTexture = new THREE.TextureLoader().load('turtle.jpg');
+const turtleTexture = new THREE.TextureLoader().load('turtle.webp');
 
 const turtle = new THREE.Mesh(new THREE.BoxGeometry(5, 5, 5), new THREE.MeshBasicMaterial({ map: turtleTexture }));
 
