@@ -46,13 +46,13 @@ Array(200).fill().forEach(addStar);
 
 // OCEAN Background
 
-const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
+const oceanTexture = new THREE.TextureLoader().load('new-ocean.jpg');
 //const oceanTexture = new THREE.TextureLoader().load('new-ocean.webp');
 scene.background = oceanTexture;
 
 // PLASTIC SQUARE
 
-const plasticTexture = new THREE.TextureLoader().load('oceanplastic.webp');
+const plasticTexture = new THREE.TextureLoader().load('oceanplastic.jpg');
 
 const plastic = new THREE.Mesh(new THREE.BoxGeometry(20, 20, 20), new THREE.MeshBasicMaterial({ map: plasticTexture }));
 
@@ -64,7 +64,7 @@ plastic.position.x = 10;
 
 // BEACH SQUARE
 
-const beachTexture = new THREE.TextureLoader().load('beach.webp');
+const beachTexture = new THREE.TextureLoader().load('beach.jpg');
 
 const beach = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), new THREE.MeshBasicMaterial({ map: beachTexture }));
 
@@ -76,7 +76,7 @@ beach.position.x = 5;
 
 // TURTLE SQUARE
 
-const turtleTexture = new THREE.TextureLoader().load('turtle.webp');
+const turtleTexture = new THREE.TextureLoader().load('turtle.jpg');
 
 const turtle = new THREE.Mesh(new THREE.BoxGeometry(5, 5, 5), new THREE.MeshBasicMaterial({ map: turtleTexture }));
 //const turtle = new THREE.Mesh(new THREE.CapsuleGeometry( 1, 1, 4, 8 ), new THREE.MeshBasicMaterial({ map: turtleTexture }));
@@ -138,45 +138,5 @@ function animate() {
 animate();
 
 
-// animating the videos
 
-//const animationSection = document.querySelector('.animation');
-
-//const green = document.querySelector('.green');
-
-//animation.onscroll = () => {
-//if (animation.scrollTop > 0){
-
-//  green.play();
-//}
-//}
-
-
-
-// fetching videos from wordpress
-
-const endpoint = "https://federicobarbieri.dk/cph-cartel/wp-json/wp/v2/media";
-
-
-async function getData() {
-    let result = await fetch(endpoint);
-    showPosts(await result.json());
-}
-
-function showPosts(posts){
-    
-    posts.forEach((bikini) => {
-
-        let template = document.querySelector('template').content;
-        let clone = template.cloneNode(true);
-
-        clone.querySelector('video').src = bikini.source_url;
-
-        let parent = document.querySelector('.animation');
-
-        parent.appendChild(clone);
-    });
-}
-
-getData();
 
