@@ -46,8 +46,8 @@ Array(200).fill().forEach(addStar);
 
 // OCEAN Background
 
-//const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
-const oceanTexture = new THREE.TextureLoader().load('new-ocean.webp');
+const oceanTexture = new THREE.TextureLoader().load('ocean1.jpg');
+//const oceanTexture = new THREE.TextureLoader().load('new-ocean.webp');
 scene.background = oceanTexture;
 
 // PLASTIC SQUARE
